@@ -8,4 +8,5 @@ Steps to Complete this assignment:
 4.Solve Some Errors which I was facing in the code.
 5.need to add test cases.
 6.Made some Changes in the code get the proper output according to the instructions.
-7.Solved Error which was facing in triangle
+7.Solved Error which was facing in triangle.
+8.Added Test Cases For Square.
