@@ -13,9 +13,7 @@ public class Triangle : IShape
 
     public double CalculateArea()
     {
-    //    double s = (Side1 + Side2 + Side3) / 2;
-    //     return Math.Sqrt(s * (s - Side1) * (s - Side2) * (s - Side3));
-    return 0;
+         return 0;
     }
 
     public double CalculatePerimeter()
