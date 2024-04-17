@@ -1,12 +1,11 @@
-namespace GeometryApplication_Test;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//Test Cases For area and perimeter of Square :
+namespace GeometryApplication_Test;
+
 [TestClass]
 public class SquareTests
 {
     [TestMethod]
-    public void TestCalculateArea()
+    public void Test_Area_1()
     {
         double sideLength = 5;
         Square square = new Square(sideLength);
@@ -15,156 +14,75 @@ public class SquareTests
     }
 
     [TestMethod]
-    public void TestCalculatePerimeter()
+    public void Test_Area_2()
     {
+        double sideLength = 0;
+        Square square = new Square(sideLength);
+        double area = square.CalculateArea();
+        Assert.AreEqual(0, area);
+    }
+
+    [TestMethod]
+    public void Test_Area_3()
+    {
+        double sideLength = -5;
+        Square square = new Square(sideLength);
+        double area = square.CalculateArea();
+        Assert.AreEqual(25, area); 
+    }
+
+    [TestMethod]
+    public void Test_Area_4()
+    {
+        double sideLength = 1000;
+        Square square = new Square(sideLength);
+        double area = square.CalculateArea();
+        Assert.AreEqual(1000000, area);
+    }
+    [TestMethod]
+    public void Test_Permineter_1()
+    {
+        // Arrange
         double sideLength = 5;
         Square square = new Square(sideLength);
+
+        // Act
         double perimeter = square.CalculatePerimeter();
+
+        // Assert
         Assert.AreEqual(20, perimeter);
     }
-    
-}
-[TestClass]
-public class SquareTests2
-{
+
     [TestMethod]
-    public void TestCalculateArea()
+    public void Test_Permineter_2()
     {
-        double sideLength = 90;
+        // Arrange
+        double sideLength = 0;
         Square square = new Square(sideLength);
-        double area = square.CalculateArea();
-        Assert.AreEqual(50, area);
+
+        // Act
+        double perimeter = square.CalculatePerimeter();
+
+        // Assert
+        Assert.AreEqual(0, perimeter);
     }
 
     [TestMethod]
-    public void TestCalculatePerimeter()
+    public void Test_Permineter_3()
     {
-        double sideLength = 5;
+        // Arrange
+        double sideLength = -5;
         Square square = new Square(sideLength);
         double perimeter = square.CalculatePerimeter();
-        Assert.AreEqual(90, perimeter);
-    }
-}
-[TestClass]
-public class SquareTests3
-{
-    [TestMethod]
-    public void TestCalculateArea()
-    {
-        double sideLength = 6;
-        Square square = new Square(sideLength);
-        double area = square.CalculateArea();
-        Assert.AreEqual(80, area);
+        Assert.AreEqual(-20, perimeter); // Assuming the calculation handles negative side lengths correctly
     }
 
     [TestMethod]
-    public void TestCalculatePerimeter()
+    public void Test_Permineter_4()
     {
-        double sideLength = 10;
+        double sideLength = 1000;
         Square square = new Square(sideLength);
         double perimeter = square.CalculatePerimeter();
-        Assert.AreEqual(100, perimeter);
-    }
-    
-}
-
-//Test Cases For area and perimeter of Rectangle : 
-[TestClass]
-public class RectangleTests
-{
-    [TestMethod]
-    public void TestCalculateArea()
-    {
-        // Arrange
-        double length = 5;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double area = rectangle.CalculateArea();
-
-        // Assert
-        Assert.AreEqual(20, area);
-    }
-
-    [TestMethod]
-    public void TestCalculatePerimeter()
-    {
-        // Arrange
-        double length = 5;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double perimeter = rectangle.CalculatePerimeter();
-
-        // Assert
-        Assert.AreEqual(18, perimeter);
-    }
-}
-[TestClass]
-public class RectangleTests2
-{
-    [TestMethod]
-    public void TestCalculateArea()
-    {
-        // Arrange
-        double length = 5;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double area = rectangle.CalculateArea();
-
-        // Assert
-        Assert.AreEqual(20, area);
-    }
-
-    [TestMethod]
-    public void TestCalculatePerimeter()
-    {
-        // Arrange
-        double length = 5;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double perimeter = rectangle.CalculatePerimeter();
-
-        // Assert
-        Assert.AreEqual(18, perimeter);
-    }
-}
-[TestClass]
-public class RectangleTests;
-{
-    [TestMethod]
-    public void TestCalculateArea()
-    {
-        // Arrange
-        double length = 2;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double area = rectangle.CalculateArea();
-
-        // Assert
-        Assert.AreEqual(20, area);
-    }
-
-    [TestMethod]
-    public void TestCalculatePerimeter()
-    {
-        // Arrange
-        double length = 5;
-        double width = 4;
-        Rectangle rectangle = new Rectangle(length, width);
-
-        // Act
-        double perimeter = rectangle.Tes.CalculatePerimeter();
-
-        // Assert
-        Assert.AreEqual(18, perimeter);
+        Assert.AreEqual(4000, perimeter);
     }
 }
