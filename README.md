@@ -11,3 +11,5 @@ Steps to Complete this assignment:
 7.Solved Error which was facing in triangle.
 8.Added Test Cases For Square.
 9.Test cases for Reactangle Done scuccessfully
+10.Test cases for Triangle are Done scuccessfully and getting proper output.
+11.Made Some Changes In the Code.
