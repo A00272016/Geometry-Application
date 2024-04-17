@@ -8,7 +8,7 @@ class Program
     {
         var featureManagement = new Dictionary<string, string>
         {
-            { "FeatureManagement:Square", "true"},
+            { "FeatureManagement:Square", "false"},
             { "FeatureManagement:Rectangle", "false"},
             { "FeatureManagement:Triangle", "true"}
         };
@@ -21,7 +21,7 @@ class Program
         var serviceProvider = services.BuildServiceProvider();
         var featureManager = serviceProvider.GetRequiredService<IFeatureManager>();
 
-        if (featureManager.IsEnabledAsync("Square").Result)
+        if (await featureManager.IsEnabledAsync("Square").Result)
         {
             // var square = new Square(5);
             Console.WriteLine("Square feature is enabled.");
