@@ -38,7 +38,7 @@ double side1 = Convert.ToDouble(Console.ReadLine());
 double side2 = Convert.ToDouble(Console.ReadLine());
 double side3 = Convert.ToDouble(Console.ReadLine());
 
-Rectangle rectangle = new Rectangle(side1,side2,side3);
+Triangle triangle = new Triangle(side1,side2,side3);
 
 Console.WriteLine($"Area of the triangle: {triangle.CalculateArea()}");
 Console.WriteLine($"Perimeter of the triangle: {triangle.CalculatePerimeter()}");
