@@ -198,6 +198,36 @@ public class TriangleTests
         double area = triangle.CalculateArea();
         Assert.AreEqual(0, area); 
     }
-    //Test Cases Aera of Triangle starts Here:
+    //Test Cases Permimeter of Triangle starts Here:
+     [TestMethod]
+    public void Test_Permineter_triangle_1()
+    {
+        Triangle triangle = new Triangle(3, 3, 3);
+        double perimeter = triangle.CalculatePerimeter();
+        Assert.AreEqual(9, perimeter); // Expected perimeter of an equilateral triangle with side length 3
+    }
 
+    [TestMethod]
+    public void Test_Permineter_triangle_2()
+    {
+        Triangle triangle = new Triangle(3, 4, 5);
+        double perimeter = triangle.CalculatePerimeter();
+        Assert.AreEqual(12, perimeter); // Expected perimeter of a right triangle with sides 3, 4, and 5
+    }
+
+    [TestMethod]
+    public void Test_Permineter_triangle_3()
+    {
+        Triangle triangle = new Triangle(7, 8, 10);
+        double perimeter = triangle.CalculatePerimeter();
+        Assert.AreEqual(25, perimeter); // Expected perimeter of a scalene triangle with sides 7, 8, and 10
+    }
+
+    [TestMethod]
+    public void Test_Permineter_triangle_4()
+    {
+        Triangle triangle = new Triangle(0, 4, 4);
+        double perimeter = triangle.CalculatePerimeter();
+        Assert.AreEqual(8, perimeter); 
+    }
 }
