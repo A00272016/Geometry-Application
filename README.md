@@ -10,3 +10,4 @@ Steps to Complete this assignment:
 6.Made some Changes in the code get the proper output according to the instructions.
 7.Solved Error which was facing in triangle.
 8.Added Test Cases For Square.
+9.Test cases for Reactangle Done scuccessfully
