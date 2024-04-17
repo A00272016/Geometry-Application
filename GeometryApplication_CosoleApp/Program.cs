@@ -21,7 +21,7 @@ class Program
         var serviceProvider = services.BuildServiceProvider();
         var featureManager = serviceProvider.GetRequiredService<IFeatureManager>();
 
-        if (await featureManager.IsEnabledAsync("Square").Result)
+        if (await featureManager.IsEnabledAsync("Square"))
         {
             // var square = new Square(5);
             Console.WriteLine("Square feature is enabled.");
@@ -38,7 +38,7 @@ class Program
         Console.WriteLine($"Area of the Square: {square.CalculateArea()}");
         Console.WriteLine($"Perimeter of the Square: {square.CalculatePerimeter()}");
 
-        if (featureManager.IsEnabledAsync("Rectangle").Result)
+        if (featureManager.IsEnabledAsync("Rectangle"))
         {
             // var square = new Square(5);
             Console.WriteLine("Rectangle feature is enabled.");
@@ -57,7 +57,7 @@ class Program
         Console.WriteLine($"Area of the Square: {rectangle.CalculateArea()}");
         Console.WriteLine($"Perimeter of the Square: {rectangle.CalculatePerimeter()}");
 
-        if (featureManager.IsEnabledAsync("Triangle").Result)
+        if (featureManager.IsEnabledAsync("Triangle"))
         {
             Console.WriteLine("Triangle feature is enabled.");
         }
