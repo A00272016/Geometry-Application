@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿//A00272016 Milan Pandya
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
 
-var featureManagement = new Dictionary<string, string> {{ "FeatureManagement:Square", "true"}, { "FeatureManagement:Rectangle", "true"}, { "FeatureManagement:Triangle", "true"}};
+var featureManagement = new Dictionary<string, string> {{ "FeatureManagement:Square", "true"}, { "FeatureManagement:Rectangle", "false"}, { "FeatureManagement:Triangle", "true"}};
 
 IConfigurationRoot configuration = new ConfigurationBuilder().AddInMemoryCollection(featureManagement).Build();
 var services = new ServiceCollection();
@@ -17,8 +18,8 @@ double side = Convert.ToDouble(Console.ReadLine());
 
 Square square = new Square(side);
 
-Console.WriteLine($"Area of the Square: {square.CalculateArea()}");
-Console.WriteLine($"Perimeter of the Square: {square.CalculatePerimeter()}");
+Console.WriteLine($"----------Area of the Square: {square.CalculateArea()}");
+Console.WriteLine($"----------Perimeter of the Square: {square.CalculatePerimeter()}");
 }
 if (await featureManager.IsEnabledAsync("Rectangle"))
 {
@@ -29,8 +30,8 @@ double width = Convert.ToDouble(Console.ReadLine());
 
 Rectangle rectangle = new Rectangle(length,width);
 
-Console.WriteLine($"Area of the Square: {rectangle.CalculateArea()}");
-Console.WriteLine($"Perimeter of the Square: {rectangle.CalculatePerimeter()}");
+Console.WriteLine($"----------Area of the Square: {rectangle.CalculateArea()}");
+Console.WriteLine($"----------Perimeter of the Square: {rectangle.CalculatePerimeter()}");
 }
 if (await featureManager.IsEnabledAsync("Triangle"))
 {
@@ -42,6 +43,6 @@ Console.WriteLine("----------Enter the side3 length of the triangle:----------")
 double side3 = Convert.ToDouble(Console.ReadLine());
 
 Triangle triangle = new Triangle(side1,side2,side3);
-Console.WriteLine($"Area of the triangle: {triangle.CalculateArea()}");
-Console.WriteLine($"Perimeter of the triangle: {triangle.CalculatePerimeter()}");
+Console.WriteLine($"----------Area of the triangle: {triangle.CalculateArea()}");
+Console.WriteLine($"----------Perimeter of the triangle: {triangle.CalculatePerimeter()}");
 }

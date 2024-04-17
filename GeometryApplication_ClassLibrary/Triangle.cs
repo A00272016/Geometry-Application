@@ -1,3 +1,4 @@
+//A00272016 Milan Pandya
 public class Triangle : IShape
 {
     private double side1;
